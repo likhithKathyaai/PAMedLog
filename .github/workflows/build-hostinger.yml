@@ -1,0 +1,48 @@
+name: Build Hostinger Static
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Vite website
+        run: npm run build
+
+      - name: Verify production output
+        run: |
+          test -f dist/index.html
+          test -f dist/.htaccess
+          grep -q "assets/" dist/index.html
+
+      - name: Publish production files to hostinger-static
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd dist
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b hostinger-static
+          git add -A
+          git commit -m "Production build from ${GITHUB_SHA}"
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin hostinger-static
