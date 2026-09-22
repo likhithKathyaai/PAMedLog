@@ -27,3 +27,13 @@ body{overflow-x:hidden}.cursorGlow{position:fixed;z-index:0;left:var(--mx,-400px
 @media(max-width:1100px){.preFooterBox{grid-template-columns:55px 1fr 1.3fr auto}.preFooter em{display:none}.footerGrid{grid-template-columns:1.6fr repeat(2,1fr)}.footerGrid>div:nth-child(4),.footerGrid>div:nth-child(5){margin-top:10px}.footerBottom{grid-template-columns:1fr 1fr}.footerBottom span:nth-child(2){display:none}}
 @media(max-width:900px){.navrow{height:72px}.navrow nav{top:72px;background:#fff;color:#18362a;box-shadow:0 18px 45px #073c2525}.navrow nav>a:not(.pill){color:#18362a}.preFooterBox{grid-template-columns:55px 1fr}.preFooterBox p{border-left:0;padding-left:0}.preFooterBox .pill{grid-column:1/-1}.footerGrid{grid-template-columns:1.4fr 1fr 1fr}.footerBrand{grid-column:1/-1}.footerBottom{grid-template-columns:1fr}.footerBottom span:last-child{justify-content:flex-start}}
 @media(max-width:620px){.navrow .brand img{width:54px;height:46px}.navrow .brand span strong{font-size:12px}.preFooter{padding:35px 0 20px}.preFooterBox{grid-template-columns:44px 1fr;padding:22px 18px;gap:16px}.preIcon{width:42px;height:42px}.preFooter h2{font-size:22px}.preFooter p{grid-column:1/-1}.preFooter .pill{width:100%}.footerGrid{grid-template-columns:1fr 1fr;gap:34px 22px;padding-bottom:38px}.footerBrand{grid-column:1/-1}.footerBrand .brand img{width:92px;height:70px}.footerGrid>div:nth-child(5){margin-top:0}.footerBottom{padding-bottom:86px}.modernFooter{padding-top:48px}}
+
+/* V4.1 homepage/footer spacing correction */
+main.pageEnter{display:block;margin:0;padding:0}
+main.pageEnter>.section:last-child{padding-bottom:54px}
+main.pageEnter>.section:last-child .lead{margin-bottom:0}
+.preFooter{margin-top:0!important;padding-top:28px!important}
+.preFooterBox{margin-top:0}
+.modernFooter{margin-top:0}
+@media(max-width:900px){main.pageEnter>.section:last-child{padding-bottom:42px}.preFooter{padding-top:22px!important}}
+@media(max-width:620px){main.pageEnter>.section:last-child{padding-bottom:30px}.preFooter{padding-top:14px!important}}
