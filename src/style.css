@@ -45,3 +45,6 @@ main.pageEnter>.section:last-child .lead{margin-bottom:0}
 
 /* V4.3 QA hardening */
 html,body,#root{min-height:100%}body{min-width:320px}.pageEnter{overflow:clip}.formNotice{margin:4px 0 0;padding:12px 14px;border:1px solid #4b8b70;border-radius:10px;background:#0d2b20;color:#dff7eb;font-size:13px;line-height:1.5}.contact a{text-decoration:underline;text-underline-offset:3px}.contact input,.contact select,.contact textarea{width:100%}.contact textarea{resize:vertical;min-height:130px}.modernFooter a:focus-visible,.preFooter a:focus-visible{outline-color:#7cff9d}.featureFloat{z-index:3}.heroLogo{pointer-events:auto}.heroLogo img{max-width:100%}@media(max-width:900px){nav.open{max-height:calc(100vh - 90px);overflow:auto}.heroGrid{gap:24px}.visual{max-width:680px;width:100%;margin-inline:auto}.preFooterBox{overflow:hidden}}@media(max-width:620px){.hero h1{overflow-wrap:anywhere}.footerGrid a{min-height:28px;display:flex;align-items:center}.chat{max-height:70vh;overflow:auto}}
+
+/* V4.4 company contact details */
+.footerContact{display:flex;flex-wrap:wrap;gap:7px 14px;margin:14px 0 18px;color:#d9eee5;font-size:13px}.footerContact span{width:100%;font-weight:750;color:#fff}.footerContact a{color:#78f1a3!important}.contactDetails{margin-top:18px;line-height:1.8!important}.contactDetails strong{color:inherit}.contactDetails a{white-space:nowrap}
